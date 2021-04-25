@@ -10,11 +10,11 @@ function toggleModal() {
   modal.classList.toggle("show-modal");
 }
 
-function windowOnClick(event) {
+/*function windowOnClick(event) {
   if (event.target === modal) {
     toggleModal();
   }
-}
+}*/
 
 Post1.addEventListener("click", toggleModal);
 Post2.addEventListener("click", toggleModal);

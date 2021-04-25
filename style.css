@@ -7,6 +7,7 @@
 @media (max-width: 420px) {div.Logo {height: 200px;}}
 @media (max-width: 420px) {div.Thumbnails {display: none;}}
 @media (max-width: 1300px) {div.Thumbnails {flex-wrap: wrap;}}
+@media (max-width: 420px) {div.PostGrouping li {font-size: 1.5rem;}}
 @media (max-width: 1600px) {div.FooterLogo {left: 1000px;}}
 @media (max-width: 1600px) {div.FooterLogo {bottom: -190px;}}
 @media (max-width: 1260px) {div.FooterLogo {left: 700px;}}
@@ -16,7 +17,7 @@
 @media (max-width: 975px) {div.FooterLogo {bottom: -155px;}}
 @media (max-width: 875px) {div.FooterLogo img {width: 100px;}}
 @media (max-width: 875px) {div.FooterLogo {position: static;}}
-@media (max-width: 875px) {div.FooterLogo {margin-left: 40%;}}
+@media (max-width: 875px) {div.FooterLogo {margin: auto;}}
 @media (max-width: 1260px) {div.Footer a {padding: 40px 30px;}}
 @media (max-width: 875px) {div.Footer a {padding: 20px 40px;}}
 @media (max-width: 768px) {div.Footer a {padding: 10px 20px;}}
@@ -304,24 +305,17 @@ h3 {
   font-weight: 100;
   text-align: center;
 }
-/*.PostGrouping{
-  padding: 2rem;
-}*/
 .PostGrouping > ul {
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(75px, 1fr));
-  grid-gap: 10rem;  
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-gap: 1rem;
 }
-li{
-  list-style: none;
-  font-family: "Roboto Mono", sans-serif;
-  font-size: 1rem;
-}
-.Post1 {
-  opacity: 0.8;
-  width: 275px;
+.PostGrouping > ul > li > button {
   height: 375px;
-  background-image: url(https://i.ibb.co/ynpg5zP/D2-FEA0-A6-26-D8-43-EA-9-A13-EE3501-D7-AA78-1-105-c.jpg);
+  width: 275px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 105%;
@@ -330,73 +324,41 @@ li{
   margin: 10px 10px;
   transition: border-width 0.6s linear;
 }
+li {
+  list-style: none;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1rem;
+}
+.Post1 {
+  background-image: url(https://i.ibb.co/ynpg5zP/D2-FEA0-A6-26-D8-43-EA-9-A13-EE3501-D7-AA78-1-105-c.jpg);
+}
 .Post1:hover {
   border-width: 10px;
   border-color: #e4f7e1;
 }
 .Post2 {
-  opacity: 0.8;
-  width: 275px;
-  height: 375px;
   background-image: url(https://i.ibb.co/X3hvZFJ/3688-F3-F7-A1-E1-4-B9-D-A8-B0-659578-C38836-1-105-c.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 105%;
-  border-radius: 8px;
-  box-shadow: 3px 3px 6px 1px grey;
-  margin: 10px 0px;
-  transition: border-width 0.6s linear;
 }
 .Post2:hover {
   border-width: 10px;
   border-color: #e4f7e1;
 }
 .Post3 {
-  opacity: 0.8;
-  width: 275px;
-  height: 375px;
   background-image: url(https://i.ibb.co/YPJ4CTx/252170-A6-A77-C-4654-B589-9-C76512-AED8-C-1-105-c.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 105%;
-  border-radius: 8px;
-  box-shadow: 3px 3px 6px 1px grey;
-  margin: 10px 0px;
-  transition: border-width 0.6s linear;
 }
 .Post3:hover {
   border-width: 10px;
   border-color: #e4f7e1;
 }
 .Post4 {
-  opacity: 0.8;
-  width: 275px;
-  height: 375px;
   background-image: url(https://i.ibb.co/j3mQVs2/D7-E1-D5-CC-A441-409-A-851-D-F52661653465-1-105-c.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 105%;
-  border-radius: 8px;
-  box-shadow: 3px 3px 6px 1px grey;
-  margin: 10px 0px;
-  transition: border-width 0.6s linear;
 }
 .Post4:hover {
   border-width: 10px;
   border-color: #e4f7e1;
 }
 .Post5 {
-  opacity: 0.8;
-  width: 275px;
-  height: 375px;
   background-image: url(https://i.ibb.co/Y8wcDmw/43233-F26-6891-414-F-AA29-521-A71-E8444-D-1-105-c.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 105%;
-  border-radius: 8px;
-  box-shadow: 3px 3px 6px 1px grey;
-  margin: 10px 0px;
-  transition: border-width 0.6s linear;
 }
 .Post5:hover {
   border-width: 10px;
@@ -420,7 +382,7 @@ li{
   align-items: center;
   flex-direction: column;
   margin-top: 200px;
-  margin-bottom: 425px;
+  margin-bottom: 225px;
 }
 .GalleryPhoto1 {
   opacity: 0.8;
@@ -430,7 +392,7 @@ li{
   background-position: center;
   background-repeat: no-repeat;
   background-size: 140%;
-  border-radius: 22px;
+  border-radius: 15px;
   box-shadow: 3px 3px 6px 1px grey;
   border: solid 5px #fcd703;
   transition: border-width 0.6s linear;
@@ -504,11 +466,12 @@ h4 {
   padding: 60px 80px;
 }
 .FooterLogo {
+  width: 200px;
+  margin: 0px;
   position: relative;
   bottom: -200px;
   left: 1300px;
   z-index: 1;
-  
 }
 .FooterLogo img {
   width: 200px;
